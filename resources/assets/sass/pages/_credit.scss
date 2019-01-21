@@ -1,0 +1,16 @@
+.credit-wrapper {
+padding-top: 4em;
+
+
+
+  .credit {
+    max-width: 80%;
+      border:2px solid $orange;
+      height:10em;
+
+      .standard-button {
+        padding:10px;
+        z-index: 10;
+      }
+  }
+}

@@ -1,0 +1,31 @@
+.admin-product {
+  border: 2px solid #000;
+  margin-top:1em;
+  max-width:300px;
+  max-height:35em;
+  min-height:30em;
+  button {
+      margin-top:5px;
+  }
+    img {
+      max-height: 8em;
+      max-width: 100%;
+    }
+}
+
+.website-status {
+  width:100%;
+  position: relative;
+  h1 {
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding:1em;
+    text-transform: uppercase;
+    font-size: 3rem;
+    border: 2px solid black;
+    background-color: darken(#d3d3d3, 40%);
+    color:white;
+
+  }
+}

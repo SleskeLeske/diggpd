@@ -1,0 +1,38 @@
+.register-title {
+  font: {
+    family: 'Oswald', sans-serif;
+    size: 6em;
+  }
+  color: $orange;
+}
+
+.register-container {
+  border-radius: 2%;
+  margin: {
+    bottom:100px;
+  }
+  .signup-title {
+    font: {
+      family: 'Oswald', sans-serif;
+      size: 3em;
+    }
+    color: $orange;
+    margin: {
+      bottom:40px;
+    }
+
+  }
+  width: 50%;
+  margin: {
+    left:auto;
+    right:auto;
+    top:10%;
+  }
+  padding:{
+  top:40px;
+  bottom:60px;
+  left:40px;
+  right:40px;
+  }
+  border:1px solid $orange;
+}

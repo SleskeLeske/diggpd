@@ -1,0 +1,116 @@
+<script>
+jQuery(document).ready(function(){
+   jQuery('[id^=ajaxSubmit]').click(function(e){
+      e.preventDefault();
+      $.ajaxSetup({
+         headers: {
+             'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+         }
+     });
+      jQuery.ajax({
+         url: "{{ route('postCart') }}",
+         method: 'post',
+         data: {
+            id: jQuery('#id').val(),
+            qty: jQuery('#qty').val(),
+         },
+         error: function(data) {
+           var errors = data.responseJSON;
+           console.log(errors);
+         },
+         success: function(result){
+            jQuery('.alert').show();
+            jQuery('.alert').html(result.success);
+         }});
+      });
+   });
+</script>
+
+
+                <script>
+                  $(document).ready(function() {
+                      <?php foreach($cartContents as $cartContent) { ?>
+                          var <?php echo $cartContent->id; ?>;
+                        <?php } ?>
+                          if(<?php $cartContent->id ?> == <?php $product->id ?>) {
+                            $('#cartBtn<?php echo $product->id;?>').hide();
+                            $('#productForm<?php echo $product->id;?>').show();
+                          }
+
+                  });
+                </script>
+
+
+
+                 cartBtn<?php echo $product->id;?>
+
+                  productForm{{$product->id}}
+
+
+
+                  <script>
+                    $(document).ready(function() {
+                        <?php foreach($cartContents as $cartContent) { ?>
+                            if(<?php echo $cartContent->id ?> = {{$product->id}}) {
+                              $('.cartBtn<?php echo $product->id;?>').hide();
+                              $('.productForm<?php echo $product->id;?>').show();
+                            } else {
+                              $('.cartBtn<?php echo $product->id;?>').show();
+                              $('.productForm<?php echo $product->id;?>').hide();
+                            }
+                          <?php } ?>
+                    });
+                  </script>
+
+
+                  <script>
+
+                        <?php foreach($cartContents as $cartContent) { ?>
+                            if(<?php echo $cartContent->id ?> == {{$product->id}}) {
+                              $('.cartBtn{{$product->id}}').addClass('no-show');
+                              $('.productForm{{$product->id}}').removeClass('no-show');
+                            } else {
+                              $('.cartBtn<?php echo $product->id;?>').removeClass('no-show');
+                              $('.productForm<?php echo $product->id;?>').addClass('no-show');
+                            }
+                          <?php } ?>
+
+                  </script>
+
+
+
+                  //get cart ajax code 
+                  $cartItems = Cart::content();
+                  $data = $cartItems;
+                  $totalRow = $data->count();
+                  if($totalRow > 0) {
+                    $output = array();
+                    foreach($data as $row) {
+                      $output[] = '
+
+
+
+                                  <div class="item main-product-container">
+                                    <a href="#"<i class="fa fa-exclamation" aria-hidden="true"></i></a>
+                                    <div class="product-img text-center">
+                                      <img src="#">
+                                    </div>
+                                    <p class="price text-center">'.$row->price.',- kr</p>
+                                    <div class="product-title">'.$row->name.'</div>
+                                      <form id="myForm">
+                                      <input class="qty-input" name="qty" id="qty" type="integer" value="0">
+                                      <input type="hidden" id="id" name="id" value="'.$row->id.'">
+
+
+                                      <input type="submit" id="ajaxSubmit" class="cart-button" value="Legg til">
+                                      </form>
+
+                                  </div>
+                      ';
+                    }
+                  }
+                  $data = array(
+                    'table_data' => $output,
+                    'total_row' => $totalRow,
+                  );
+                  echo json_encode($data);

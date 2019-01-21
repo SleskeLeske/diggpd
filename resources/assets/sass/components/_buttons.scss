@@ -1,0 +1,151 @@
+.standard-button {
+  width:6em;
+  height:4em;
+  border:1px solid $orange;
+  background: $orange;
+  color: #fff;
+  font: {
+    family: 'Oswald', sans-serif;
+    size:1em;
+    weight:bold;
+  }
+  padding:0;
+  padding: 0.2em;
+  padding-bottom: 0.3em;
+  transition: 0.15s all;
+    &:hover {
+    color:$orange;
+    background-color: #fff;
+    }
+    margin:auto;
+
+}
+
+body {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+section {
+  padding:50px 20px;
+  background-color: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #65166F;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #222D75;
+  border-color: #222D75;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #222D75;
+  border-color: #222D75;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #222D75;
+  border-color: #222D75;
+}
+
+.btn-primary .badge {
+  color: #222D75;
+  background-color: white;
+}
+
+.btn-xl {
+  color: white;
+  background-color: #222D75;
+  border-color: #222D75;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  color: white;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+
+.btn:active {
+  box-shadow: none !important;
+}
+
+.cart-button {
+  min-height:30px;
+  height:30px;
+  width:60px;
+  max-width: 100px;
+  background-color: $light-blue;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  transition: 0.1s all ease;
+  font: {
+    size:10px;
+  }
+  color:#fff;
+    &:hover {
+      background-color: #fff;
+      border:1px solid $light-blue;
+      color: $light-blue;
+    }
+}
+.button-delete {
+  background-color: $red;
+  border: 1px solid #fff;
+  &:hover {
+      border: 1px solid $red;
+      background-color: #fff;
+      color: $red;
+  }
+}

@@ -1,0 +1,18 @@
+.user-container {
+  border: 1px solid $orange;
+  padding:0;
+  margin: {
+    top:4em;
+  }
+    .user-title {
+      padding:0;
+      background: $orange;
+      color: #fff;
+      h1 {
+        padding:20px 0;
+        margin:0;
+        text-transform: capitalize;
+        font-family: 'Roboto Slab', sans-serif;
+      }
+    }
+}

@@ -1,0 +1,137 @@
+.car-div {
+  .car-container {
+    .title-wrapper {
+              position: absolute;
+              height:40%;
+              top:-60%;
+              width:2000%;
+              z-index: 20000;
+              padding: 0;
+              margin: 0;
+              border: 0;
+
+      h2 {
+      font-family: 'Oswald', sans-serif;
+      color: $orange;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      font-size: 60px;
+      position: relative;
+      left:-10%;
+      bottom:70%;
+
+    }
+  }
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .car-div {
+
+    .car-container {
+
+      .title-wrapper {
+
+        h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2em;
+        color: $orange;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-size: 40px;
+        position: absolute;
+        margin-left:2.5em;
+              bottom:0%;
+      }
+    }
+    }
+  }
+}
+@media only screen and (max-width: 860px) {
+  .car-div {
+
+    .car-container {
+
+      .title-wrapper {
+
+        h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        color: $orange;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-size: 40px;
+        position: absolute;
+
+        margin-left:2.5em;
+      }
+    }
+    }
+  }
+}
+@media only screen and (max-width: 610px) {
+  .car-div {
+
+    .car-container {
+
+      .title-wrapper {
+
+        h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        color: $orange;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-size: 40px;
+        position: absolute;
+        margin-left:2.5em;
+      }
+    }
+    }
+  }
+}
+@media only screen and (max-width: 460px) {
+  .car-div {
+    .car-container {
+      .title-wrapper {
+        h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        color: $orange;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-size: 40px;
+        position: absolute;
+        right:2em;
+        margin-left:5em;
+      }
+    }
+    }
+  }
+}
+@media only screen and (max-width: 340px) {
+  .car-div {
+    .car-container {
+      .title-wrapper {
+        h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        color: $orange;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        font-size: 40px;
+        position: absolute;
+        right:2em;
+        margin-left:4.5em;
+        bottom:20px;
+
+      }
+    }
+    }
+  }
+}
