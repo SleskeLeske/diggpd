@@ -29,7 +29,7 @@
 
           <hr class="nav-hr">
         @if (Auth::check())
-//hei
+//hei //hei
               <li>
                 <a href="/logout" class="scroll" onclick=$("#menu-close").click();>Logg ut <i class="fa fa-user" aria-hidden="true"></i></a>
               </li>
